@@ -1,0 +1,30 @@
+.inputs {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button {
+
+    display: flex;
+}
+
+form label {
+
+    text-align: left;
+    display: block;
+    font-size: 1.75em 
+}
+
+.input-section {
+
+    width: fit-content;
+    text-align: center;
+}
+
+
+
+
+

@@ -1,0 +1,41 @@
+.background-image {
+
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.background-image:hover, .background-image text:hover{
+
+    opacity: 0.2;
+}
+
+.grid-element {
+    
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1em;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.parent{
+
+    display: grid;
+    transition: opacity 0.8s
+}
+
+.text {
+
+    opacity: 200%;
+    z-index: 1
+}
+
+a {
+    pointer-events: auto;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    width:max-content
+}

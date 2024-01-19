@@ -1,0 +1,29 @@
+#resume-parent-section{
+
+    margin-left: 6em;
+    text-align: left;
+}
+
+#resume-section-title{
+
+    text-align: left;
+}
+
+#resume-a-tag{
+    display: inline
+}
+
+.proficiencies li {
+    text-indent: 1.5em;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0.5em;
+    font-weight: normal;
+}
+
+p, a{
+    text-align: left;
+    margin-left: 0;
+    font-size: 30px;
+    
+}
