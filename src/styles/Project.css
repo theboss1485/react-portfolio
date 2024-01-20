@@ -3,33 +3,27 @@
     width: 500px;
     height: 500px;
     position: relative;
+    border-radius: 10%;
+    margin: 2em;
 }
 
-.background-image:hover, .background-image text:hover{
+.background-image:hover, .background-image text:hover {
 
     opacity: 0.2;
 }
 
 .grid-element {
     
+    width: 500px;
+    height: 500px;
     grid-column: 1;
     grid-row: 1;
     font-size: 1em;
+    margin: 1em;
     text-align: center;
     justify-self: center;
     align-self: center;
-}
-
-.parent{
-
-    display: grid;
-    transition: opacity 0.8s
-}
-
-.text {
-
-    opacity: 200%;
-    z-index: 1
+    
 }
 
 a {
@@ -39,3 +33,12 @@ a {
     font-size: 1.5em;
     width:max-content
 }
+
+@media screen and (min-width: 1100px) {
+
+    .background-image {
+
+        margin: 0;
+    }
+}
+

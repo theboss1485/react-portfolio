@@ -5,7 +5,7 @@ export default function Portfolio(){
 
     return (
 
-        <section>
+        <section className='parent'>
             {console.log(portfolio)}
             {portfolio.map((element, index) => {
                 

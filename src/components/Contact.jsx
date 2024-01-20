@@ -88,29 +88,29 @@ export default function Contact(){
         <section>
             <h1>Contact</h1>
             <form>
-                <section className='inputs'>
-                    <section className='input-section'>
+                <div className='inputs'>
+                    <div className='input-section'>
                         <label htmlFor="name">Name:</label>
-                        <section>
+                        <div>
                             <input type="text" id="name" onBlur={handleBlur}></input>
-                        </section>
-                    </section>
-                    <section className='input-section'>
+                        </div>
+                    </div>
+                    <div className='input-section'>
                         <label htmlFor="email">Email address:</label>
-                        <section>
+                        <div>
                             <input type="text" id="email" onBlur={handleBlur}></input>
-                        </section>
-                    </section>
-                    <section className='input-section'>
+                        </div>
+                    </div>
+                    <div className='input-section'>
                         <label htmlFor="message">Message:</label>
-                        <section>
+                        <div>
                             <textarea id="message" onBlur={handleBlur}></textarea>
-                        </section>
-                        <section className='submit-button'>
+                        </div>
+                        <div className='submit-button'>
                             <button>Submit</button>
-                        </section>
-                    </section>
-                </section>
+                        </div>
+                    </div>
+                </div>
                 
                 <p id="error-message">{errorMessageText}</p>
             </form>

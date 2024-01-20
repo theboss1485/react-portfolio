@@ -2,12 +2,15 @@
 import { useEffect } from 'react';
 import { useState } from 'react'
 
+import Header from './components/Header.jsx'
 import AboutMe from './components/AboutMe.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
 import Resume from './components/Resume.jsx';
+import Footer from './components/Footer.jsx';
 import './styles/App.css'
-import Header from './components/Header.jsx'
+
+
 
 function App() {
 
@@ -27,11 +30,12 @@ function App() {
     
     return (
         <section>
-            <Header navButtonClicked={changeActiveSection}/>
+            <Header navButtonClicked={changeActiveSection} />
             {activeSection === "about-me" && <AboutMe />}
             {activeSection === "portfolio" && <Portfolio />}
             {activeSection === "contact" && <Contact />}
             {activeSection === "resume" && <Resume />}
+            <Footer />
         </section>
     )
 }

@@ -21,8 +21,8 @@ export function Project(props){
 
     return (
         <section className="parent">
-            <BackgroundImage element={props.element} isHovered={isHovered} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}></BackgroundImage>
-            {isHovered ? (<InformationalText element={props.element} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}></InformationalText>) : null}
+            <BackgroundImage element={props.element} isHovered={isHovered} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+            {isHovered ? (<InformationalText element={props.element} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />) : null}
         </section>
     )
 }
