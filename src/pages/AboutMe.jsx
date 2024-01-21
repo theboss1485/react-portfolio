@@ -8,7 +8,7 @@ export default function AboutMe(){
                 <h1>About Me</h1>
             </section>
             <section>
-                <img src='../../src/assets/images/gabriel-morrow.png' />
+                <img src='assets/images/gabriel-morrow.png' />
             </section>
             <section>
                 <p>I am a graduate of Liberty University Online with a degree in Information Technology: Application and Database Development. 

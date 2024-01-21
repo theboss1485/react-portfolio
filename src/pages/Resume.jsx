@@ -10,7 +10,7 @@ export default function Resume(){
                 {/* <p>Download my <a download id="resume-a-tag" href={downloadUrl} onClick={downloadResume}>resume</a></p> */}
                 <div>
                 <h1 id="resume-section-title">Resume</h1>
-                <p className="resume-p">Download my <a href="../../src/assets/pdfs/resume-gabriel-morrow-2.pdf" download={"Gabriel_Morrow_Resume.pdf"} id="resume-a-tag" >resume</a></p>
+                <p className="resume-p">Download my <a href="assets/pdfs/resume-gabriel-morrow-2.pdf" download={"Gabriel_Morrow_Resume.pdf"} id="resume-a-tag" >resume</a></p>
 
                 <p className="resume-p">Front-end Proficiencies</p>
                     <ul className="proficiencies">
