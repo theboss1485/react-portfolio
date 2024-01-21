@@ -5,7 +5,8 @@
 }
 
 #resume-a-tag{
-    display: inline
+    display: inline;
+    font-size: 1em
 }
 
 .resume-inner-container {
@@ -22,6 +23,7 @@
     list-style-position: inside;
     padding-left: 0.5em;
     font-weight: normal;
+    font-size: 1.5em;
 }
 
 .resume-p{

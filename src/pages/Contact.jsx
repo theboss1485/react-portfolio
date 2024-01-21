@@ -1,4 +1,4 @@
-import '../styles/Contact.css'
+import '../styles/page-styles/Contact.css'
 import React, { useState, useEffect } from 'react';
 export default function Contact(){
 
@@ -148,7 +148,7 @@ export default function Contact(){
                             <textarea id="message" onBlur={handleBlur}></textarea>
                         </div>
                         <div className='submit-button-div'>
-                            <button class="actual-submit-button" onClick={handleSubmit}>Submit</button>
+                            <button className="actual-submit-button" onClick={handleSubmit}>Submit</button>
                         </div>
                     </div>
                     <p id="error-or-confirmation-message">{errorConfirmationMessageText}</p>

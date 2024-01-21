@@ -1,4 +1,4 @@
-import '../styles/BackgroundImage.css'
+import '../styles/component-styles/BackgroundImage.css'
 
 export function BackgroundImage(props){
 

@@ -1,4 +1,4 @@
-import '../styles/AboutMe.css'
+import '../styles/page-styles/AboutMe.css'
 export default function AboutMe(){
 
     return (
