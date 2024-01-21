@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", "Montserrat", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,7 +28,7 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #468189;
+  background-image: linear-gradient(to right, #E7E393 , #F0612D);
 }
 
 h1 {
@@ -56,7 +56,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: black;
     background-color: #ffffff;
   }
   a:hover {

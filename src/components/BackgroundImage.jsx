@@ -6,7 +6,7 @@ export function BackgroundImage(props){
         backgroundImage: `url(${props.element[0]})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        opacity: props.isHovered ? '0.2' : '1'
+        opacity: props.isHovered ? '0.1' : '1'
     }
 
     return (

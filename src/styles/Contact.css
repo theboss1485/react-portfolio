@@ -10,7 +10,8 @@ input {
     width: 25em;
     height: 2em;
     border-radius: 2%;
-    font-size: 1em;
+    font-size: 1.2em;
+    background-color: #F7A98D;
 }
 
 textarea {
@@ -18,9 +19,9 @@ textarea {
     width: 25em;
     height: 6em;
     border-radius: 2%;
-    font-size: 1em;
-    font-family: "Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"
-    ;
+    font-size: 1.2em;
+    font-family: "Playfair Display", "Montserrat", serif;
+    background-color: #F7A98D;
 }
 
 .inputs {
@@ -32,10 +33,18 @@ textarea {
     
 }
 
-.submit-button {
+.submit-button-div {
 
     display: flex;
     margin-top: 1em;
+}
+
+.actual-submit-button {
+
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #F7A98D;
+    border: 1px solid black;
 }
 
 
@@ -47,16 +56,18 @@ textarea {
     margin-bottom: 0.5em
 }
 
-#error-message {
+#error-or-confirmation-message {
 
-    text-align: center;
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 @media screen and (max-width: 560px) {
 
     input, textarea {
 
-        width: 20em
+        width: 17em
     }
 }
 
@@ -65,7 +76,7 @@ textarea {
     input, textarea {
 
         width: 16.5em;
-        font-size: 0.9em
+        font-size: 1em
     }
 }
 

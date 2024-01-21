@@ -2,7 +2,11 @@ import '../styles/Contact.css'
 import React, { useState, useEffect } from 'react';
 export default function Contact(){
 
-    const [messageText, setMessagetext] = useState("");
+    const [errorConfirmationMessageText, setErrorConfirmationMessageText] = useState("");
+    const [contactMessageText, setContactMessageText] = useState("");
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+
     
 
     const handleBlur = async (event) => {
@@ -16,30 +20,32 @@ export default function Contact(){
 
             if(event.target.value.trim() === ""){
 
-                setMessagetext("name is required");
+                setErrorConfirmationMessageText("name is required");
                 nameOK = false;
 
             } else {
 
                 nameOK = true;
+                setName(event.target.value.trim());
             }
         
         } else if (event.target.id === "email"){
 
             if(event.target.value.trim() === ""){
 
-                setMessagetext("email is required");
+                setErrorConfirmationMessageText("email is required");
                 emailOK = false;
                
 
             } else if(!event.target.value.trim().match(emailRegex)){
 
-                setMessagetext("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
+                setErrorConfirmationMessageText("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
                 emailOK = false;
             
             } else {
 
                 emailOK = true;
+                setEmail(event.target.value.trim());
             }
 
         } else if (event.target.id === "message"){
@@ -47,26 +53,75 @@ export default function Contact(){
             if(event.target.value.trim() === ""){
 
 
-                setMessagetext("message is required");
+                setErrorConfirmationMessageText("message is required");
                 messageOK = false;
             
             } else {
 
                 messageOK = true;
+                setContactMessageText(event.target.value.trim())
             }
         } 
 
         if(nameOK && emailOK && messageOK){
 
-            setMessagetext("");
+            setErrorConfirmationMessageText("");
         }
     }
 
     const handleSubmit = (event) => {
 
+        let errorText = "";
+
         event.preventDefault();
-        setMessagetext("Submit button clicked");
+
+        if(name && email && contactMessageText){
+
+            setErrorConfirmationMessageText("Submit button clicked");
         
+        } else {
+
+            let missingFieldCount = 0;
+
+            if(!name){
+
+                errorText = "name "
+                missingFieldCount++;
+            }
+
+            if(!email){
+
+                if(missingFieldCount > 0){
+
+                    errorText += "and email "
+                
+                } else {
+
+                    errorText += "email "
+                }
+
+                missingFieldCount++;
+            }
+
+            if(!contactMessageText){
+
+                if(missingFieldCount > 0){
+
+                    errorText += "and message "
+                
+                } else {
+
+                    errorText += "message "
+                }
+
+                missingFieldCount++;
+            }
+
+            errorText += "required";
+            missingFieldCount = 0;
+        }
+
+        setErrorConfirmationMessageText(errorText);
     }
 
     return (
@@ -92,13 +147,14 @@ export default function Contact(){
                         <div>
                             <textarea id="message" onBlur={handleBlur}></textarea>
                         </div>
-                        <div className='submit-button'>
-                            <button onClick={handleSubmit}>Submit</button>
+                        <div className='submit-button-div'>
+                            <button class="actual-submit-button" onClick={handleSubmit}>Submit</button>
                         </div>
                     </div>
+                    <p id="error-or-confirmation-message">{errorConfirmationMessageText}</p>
                 </div>
                 
-                <p id="message">{errorMessageText}</p>
+                
             </form>
         </section>
     )

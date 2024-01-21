@@ -10,9 +10,9 @@ export default function Resume(){
                 {/* <p>Download my <a download id="resume-a-tag" href={downloadUrl} onClick={downloadResume}>resume</a></p> */}
                 <div>
                 <h1 id="resume-section-title">Resume</h1>
-                <p>Download my <a href="../../src/assets/pdfs/resume-gabriel-morrow-2.pdf" download={"Gabriel_Morrow_Resume.pdf"} id="resume-a-tag" >resume</a></p>
+                <p className="resume-p">Download my <a href="../../src/assets/pdfs/resume-gabriel-morrow-2.pdf" download={"Gabriel_Morrow_Resume.pdf"} id="resume-a-tag" >resume</a></p>
 
-                <p>Front-end Proficiencies</p>
+                <p className="resume-p">Front-end Proficiencies</p>
                     <ul className="proficiencies">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -23,7 +23,7 @@ export default function Resume(){
                         <li>HTML</li>
                         <li>HTML</li>
                     </ul>
-                <p>Back-end Proficiencies</p>
+                <p className="resume-p">Back-end Proficiencies</p>
                     <ul className="proficiencies">
                         <li>APIs</li>
                         <li>Node Js</li>
