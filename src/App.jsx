@@ -24,8 +24,6 @@ function App() {
 
     useEffect(() => {
 
-        alert(`section ${activeSection} clicked`);
-
     }, [activeSection])
     
     return (

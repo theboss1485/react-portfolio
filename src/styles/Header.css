@@ -8,23 +8,9 @@ header{
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
-
-  
 }
 
-ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    font-size: 1.75em;
-    padding: 0
-}
 
-li{
-    font-weight: bold;
-    margin-left: 2em;
-    margin-right: 2em;
-}
 
 h1 {
     font-size: 1.75em;

@@ -6,9 +6,6 @@ import {InformationalText} from './InformationalText.jsx'
 
 export function Project(props){
 
-    console.log("Props: ", props);
-    
-
     const [isHovered, setIsHovered] = useState(false);
     const history = useNavigate()
     const handleMouseEnter = () => {
@@ -20,10 +17,12 @@ export function Project(props){
       };
 
     return (
-        <section className="parent">
+        <div className="project-container">
+        <div className="project">
             <BackgroundImage element={props.element} isHovered={isHovered} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
             {isHovered ? (<InformationalText element={props.element} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />) : null}
-        </section>
+        </div>
+        </div>
     )
 }
 

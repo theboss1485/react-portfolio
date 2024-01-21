@@ -1,27 +1,72 @@
+form label {
+
+    text-align: left;
+    display: block;
+    font-size: 1.75em; 
+}
+
+input {
+
+    width: 25em;
+    height: 2em;
+    border-radius: 2%;
+    font-size: 1em;
+}
+
+textarea {
+
+    width: 25em;
+    height: 6em;
+    border-radius: 2%;
+    font-size: 1em;
+    font-family: "Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"
+    ;
+}
+
 .inputs {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .submit-button {
 
     display: flex;
+    margin-top: 1em;
 }
 
-form label {
 
-    text-align: left;
-    display: block;
-    font-size: 1.75em 
-}
 
 .input-section {
 
     width: fit-content;
     text-align: center;
+    margin-bottom: 0.5em
+}
+
+#error-message {
+
+    text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+
+    input, textarea {
+
+        width: 20em
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    input, textarea {
+
+        width: 16.5em;
+        font-size: 0.9em
+    }
 }
 
 

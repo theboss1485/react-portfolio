@@ -1,3 +1,5 @@
+import '../styles/BackgroundImage.css'
+
 export function BackgroundImage(props){
 
     const containerStyle = {

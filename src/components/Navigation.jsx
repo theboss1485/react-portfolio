@@ -3,32 +3,29 @@ import { useState } from 'react'
 
 export default function Navigation({buttonClicked}){
 
-    const [showAboutMe, setShowAboutMe] = useState(false);
-    const [showPortfolio, setShowPortfolio] = useState(false);
-    const [showContact, setShowContact] = useState(false);
-    const [showResume, setShowResume] = useState(false);
+    const [selectedItem, setSelectedItem] = useState("about-me")
 
     function handleNavClick(event){
 
         if (event.target.id === "about-me-list-item"){
 
-            setShowAboutMe(true);
+            setSelectedItem("about-me");
             buttonClicked("about-me");
+            
 
         } else if (event.target.id === "portfolio-list-item"){
 
-            setShowPortfolio(true);
+            setSelectedItem("portfolio");
             buttonClicked("portfolio");
-
 
         } else if (event.target.id === "contact-list-item"){
 
-            setShowContact(true);
+            setSelectedItem("contact");
             buttonClicked("contact");
 
         } else if (event.target.id === "resume-list-item"){
 
-            setShowResume(true);
+            setSelectedItem("resume");
             buttonClicked("resume");
         } 
     }
@@ -36,11 +33,23 @@ export default function Navigation({buttonClicked}){
     return (
 
     <nav>
-        <ul>
-            <li id="about-me-list-item" onClick={handleNavClick}>About Me</li>
-            <li id="portfolio-list-item" onClick={handleNavClick}>Portfolio</li>
-            <li id="contact-list-item" onClick={handleNavClick}>Contact</li>
-            <li id="resume-list-item" onClick={handleNavClick}>Resume</li>
+        <ul className="navigation-list">
+            <li id="about-me-list-item" 
+                className={`${selectedItem === "about-me" ? "active-item" : "inactive-item"}`}
+                onClick={handleNavClick}>About Me
+            </li>
+            <li id="portfolio-list-item" 
+                className={`${selectedItem === "portfolio" ? "active-item" : "inactive-item"}`}
+                onClick={handleNavClick}>Portfolio
+            </li>
+            <li id="contact-list-item"
+                className={`${selectedItem === "contact" ? "active-item" : "inactive-item"}`}
+                onClick={handleNavClick}>Contact
+            </li>
+            <li id="resume-list-item"
+                className={`${selectedItem === "resume" ? "active-item" : "inactive-item"}`}
+                onClick={handleNavClick}>Resume
+            </li>
         </ul>
     </nav>
     );

@@ -2,30 +2,8 @@ import '../styles/Contact.css'
 import React, { useState, useEffect } from 'react';
 export default function Contact(){
 
-    // //const [isFocusedName, setIsFocusedName] = useState(false);
-    // const [nameText, setNameText] = useState("");
-    // //const [isFocusedEmail, setIsFocusedEmail] = useState(false);
-    // const [emailText, setEmailText] = useState("");
-    // //const [isFocusedMessage, setIsFocusedMessage] = useState(false);
-    // const [messageText, setMessageText] = useState("");
-    const [errorMessageText, setErrorMessageText] = useState("");
-
-    // const handleFocusIn = (event) => {
-
-    //     if (event.target.id === "name"){
-            
-    //         setIsFocusedName(true);
-
-        
-    //     } else if (event.target.id === "email"){
-
-    //         setIsFocusedEmail(true);
-        
-    //     } else if (event.target.id === "message"){
-
-    //         setIsFocusedMessage(true)
-    //     } 
-    // }
+    const [messageText, setMessagetext] = useState("");
+    
 
     const handleBlur = async (event) => {
 
@@ -38,8 +16,9 @@ export default function Contact(){
 
             if(event.target.value.trim() === ""){
 
-                setErrorMessageText("name is required");
+                setMessagetext("name is required");
                 nameOK = false;
+
             } else {
 
                 nameOK = true;
@@ -49,13 +28,13 @@ export default function Contact(){
 
             if(event.target.value.trim() === ""){
 
-                setErrorMessageText("email is required");
+                setMessagetext("email is required");
                 emailOK = false;
                
 
             } else if(!event.target.value.trim().match(emailRegex)){
 
-                setErrorMessageText("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
+                setMessagetext("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
                 emailOK = false;
             
             } else {
@@ -68,7 +47,7 @@ export default function Contact(){
             if(event.target.value.trim() === ""){
 
 
-                setErrorMessageText("message is required");
+                setMessagetext("message is required");
                 messageOK = false;
             
             } else {
@@ -79,8 +58,15 @@ export default function Contact(){
 
         if(nameOK && emailOK && messageOK){
 
-            setErrorMessageText("");
+            setMessagetext("");
         }
+    }
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
+        setMessagetext("Submit button clicked");
+        
     }
 
     return (
@@ -107,12 +93,12 @@ export default function Contact(){
                             <textarea id="message" onBlur={handleBlur}></textarea>
                         </div>
                         <div className='submit-button'>
-                            <button>Submit</button>
+                            <button onClick={handleSubmit}>Submit</button>
                         </div>
                     </div>
                 </div>
                 
-                <p id="error-message">{errorMessageText}</p>
+                <p id="message">{errorMessageText}</p>
             </form>
         </section>
     )
