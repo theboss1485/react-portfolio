@@ -1,6 +1,6 @@
-import '../styles/Portfolio.css'
+import '../styles/page-styles/Portfolio.css'
 import {portfolio} from '../assets/portfolio.js'
-import {Project} from './Project.jsx'
+import {Project} from '../components/Project.jsx'
 export default function Portfolio(){
 
     return (

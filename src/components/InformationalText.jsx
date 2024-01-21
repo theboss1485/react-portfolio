@@ -1,4 +1,4 @@
-import '../styles/InformationalText.css';
+import '../styles/component-styles/InformationalText.css';
 
 export function InformationalText(props){
 
