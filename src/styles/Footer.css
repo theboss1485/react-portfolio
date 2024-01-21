@@ -1,0 +1,46 @@
+footer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    margin-top: 2em;
+    margin-bottom: 2em
+}
+
+.footer-icon {
+
+    width: 100px;
+    height: 100px;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    transition: transform .2s
+}
+
+.footer-icon:hover{
+    transform: scale(1.25);
+}
+
+@media screen and (min-width: 351px) and (max-width: 525px ) {
+
+    .footer-icon {
+
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    footer {
+
+        flex-direction: column;
+
+        margin-top: 1em;
+    }
+}
+
+
+

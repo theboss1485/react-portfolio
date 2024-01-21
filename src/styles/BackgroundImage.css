@@ -1,0 +1,46 @@
+.background-image {
+
+    width: 31.25em;
+    height: 31.25em;
+    position: relative;
+    border-radius: 10%;
+    margin: 2em;
+}
+
+.background-image:hover, .background-image text:hover {
+
+    opacity: 0.2;
+}
+
+@media screen and (max-width: 560px) {
+
+    .background-image, .text-section {
+
+        width: 28em;
+        height: 28em;
+        margin: 1.5em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+
+    .background-image, .text-section {
+
+        width: 30em;
+        height: 30em;
+        margin: 1em;
+        font-size: 3vw;
+        
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .background-image, .text-section {
+
+        width: 30em;
+        height: 30em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}

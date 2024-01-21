@@ -1,0 +1,12 @@
+.text-section {
+
+    text-align: center;
+    z-index: 1
+}
+
+.text-element {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight:525;
+}

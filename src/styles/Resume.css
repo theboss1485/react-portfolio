@@ -1,0 +1,41 @@
+#resume-parent-section{
+
+
+    text-align: left;
+}
+
+#resume-a-tag{
+    display: inline
+}
+
+.resume-inner-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.proficiencies li {
+    text-indent: 1.5em;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0.5em;
+    font-weight: normal;
+}
+
+.resume-p{
+    text-align: left;
+    margin-left: 0;
+    font-size: 1.8em;
+    
+}
+
+@media screen and (max-width: 560px) {
+
+    #resume-parent-section{
+
+
+        font-size: 0.8em;
+    }
+}

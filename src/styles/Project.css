@@ -1,0 +1,50 @@
+.project {
+
+    display: grid;
+}
+
+.grid-element {
+    
+    width: 31.25em;
+    height: 31.25em;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1em;
+    margin: 1em;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+a {
+    pointer-events: auto;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    width:max-content
+}
+
+@media screen and (min-width: 1100px) {
+
+    .background-image {
+
+        margin: 0;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .project {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-container {
+
+        display: flex;
+        max-width: 100%;
+    }
+}
