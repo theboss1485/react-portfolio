@@ -1,3 +1,4 @@
+/* This file contains styling for the Contact page of the application. */
 form label {
 
     text-align: left;
@@ -30,7 +31,6 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .submit-button-div {

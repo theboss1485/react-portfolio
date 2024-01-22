@@ -1,5 +1,7 @@
 import '../styles/page-styles/Contact.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+
+// This function displays the Contact page.
 export default function Contact(){
 
     const [errorConfirmationMessageText, setErrorConfirmationMessageText] = useState("");
@@ -7,8 +9,8 @@ export default function Contact(){
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
 
-    
-
+    /* This function displays an error message if the user clicks out of an input box without entering text. It also displays an error message if they
+    enter in an email address that doesn't conform to the emailRegex regular expression.*/
     const handleBlur = async (event) => {
 
         const emailRegex =  /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
@@ -16,11 +18,11 @@ export default function Contact(){
         let emailOK = true;
         let messageOK = true;
 
-        if (event.target.id === "name"){
+        if (event.target.id === "name") {
 
-            if(event.target.value.trim() === ""){
+            if(event.target.value.trim() === "") {
 
-                setErrorConfirmationMessageText("name is required");
+                setErrorConfirmationMessageText("Name is required.");
                 nameOK = false;
 
             } else {
@@ -29,15 +31,14 @@ export default function Contact(){
                 setName(event.target.value.trim());
             }
         
-        } else if (event.target.id === "email"){
+        } else if (event.target.id === "email") {
 
-            if(event.target.value.trim() === ""){
+            if(event.target.value.trim() === "") {
 
-                setErrorConfirmationMessageText("email is required");
+                setErrorConfirmationMessageText("Email is required.");
                 emailOK = false;
-               
 
-            } else if(!event.target.value.trim().match(emailRegex)){
+            } else if(!event.target.value.trim().match(emailRegex)) {
 
                 setErrorConfirmationMessageText("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
                 emailOK = false;
@@ -48,12 +49,11 @@ export default function Contact(){
                 setEmail(event.target.value.trim());
             }
 
-        } else if (event.target.id === "message"){
+        } else if (event.target.id === "message") {
 
-            if(event.target.value.trim() === ""){
+            if(event.target.value.trim() === "") {
 
-
-                setErrorConfirmationMessageText("message is required");
+                setErrorConfirmationMessageText("Message is required.");
                 messageOK = false;
             
             } else {
@@ -69,6 +69,8 @@ export default function Contact(){
         }
     }
 
+    /* This function deals with the user clicking the Submit button.  If the form doesn't contain a name, valid email address, and message,
+    the page will display an error.  Otherwise, it will display a message saying that the Submit button was clicked. */
     const handleSubmit = (event) => {
 
         let errorText = "";
@@ -83,41 +85,49 @@ export default function Contact(){
 
             let missingFieldCount = 0;
 
-            if(!name){
+            if (!name) {
 
-                errorText = "name "
+                errorText = "Name "
                 missingFieldCount++;
             }
 
-            if(!email){
+            if (!email) {
 
-                if(missingFieldCount > 0){
+                if (missingFieldCount > 0) {
 
                     errorText += "and email "
                 
                 } else {
 
-                    errorText += "email "
+                    errorText += "Email "
                 }
 
                 missingFieldCount++;
             }
 
-            if(!contactMessageText){
+            if (!contactMessageText) {
 
-                if(missingFieldCount > 0){
+                if (missingFieldCount > 0) {
 
                     errorText += "and message "
                 
                 } else {
 
-                    errorText += "message "
+                    errorText += "Message"
                 }
 
                 missingFieldCount++;
             }
 
-            errorText += "required";
+            if(missingFieldCount > 0){
+
+                errorText += "are required.";
+            
+            } else {
+
+                errorText += "is required.";
+            }
+
             missingFieldCount = 0;
         }
 
@@ -153,8 +163,6 @@ export default function Contact(){
                     </div>
                     <p id="error-or-confirmation-message">{errorConfirmationMessageText}</p>
                 </div>
-                
-                
             </form>
         </section>
     )

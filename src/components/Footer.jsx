@@ -1,4 +1,7 @@
 import '../styles/component-styles/Footer.css'
+
+/* This function displays the footer on each of the portfolio's pages.  The footer contains icons that link to 
+my profiles on GitHub, LinkedIn, and Twitter, respectively*/
 export default function Footer(){
 
     return (

@@ -1,4 +1,5 @@
-.project {
+/* This file contains styling for each Project Component that is displayed on the Portfolio page. */
+.project-container-inner {
 
     display: grid;
 }
@@ -14,10 +15,10 @@
     text-align: center;
     justify-self: center;
     align-self: center;
-    
 }
 
 a {
+
     pointer-events: auto;
     text-align: center;
     display: block;
@@ -37,12 +38,13 @@ a {
 
 @media screen and (max-width: 560px) {
 
-    .project {
+    .project-container-inner {
+        
         max-width: 100%;
         height: auto;
     }
 
-    .project-container {
+    .project-container-outer {
 
         display: flex;
         max-width: 100%;

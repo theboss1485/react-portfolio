@@ -1,3 +1,4 @@
+/* This file contains styling for the navigation bar in the Header component. */
 .navigation-list {
 
     display: flex;
@@ -35,13 +36,14 @@
 }
 
 ul {
+    
     font-size: 1.25em;
     padding: 0
 }
 
 @media screen and (max-width: 875px) {
 
-    .navigation-list li {
+    .navigation-list a {
 
         margin-left: 1em; 
         margin-right: 1em;   
@@ -50,18 +52,19 @@ ul {
 
 @media screen and (max-width: 650px) {
 
-    .navigation-list li {
+    .navigation-list a {
 
         margin-left: 0.5em; 
         margin-right: 0.5em;   
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 570px) {
 
     .navigation-list {
 
         flex-direction: column;   
+        align-items: center;
     }
 }
 
