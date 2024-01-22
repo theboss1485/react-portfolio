@@ -13,6 +13,7 @@ input {
     border-radius: 2%;
     font-size: 1.2em;
     background-color: #F7A98D;
+    font-family: "Playfair Display", "Montserrat", serif;
 }
 
 textarea {
