@@ -14,21 +14,18 @@ export default function Contact(){
     const handleBlur = async (event) => {
 
         const emailRegex =  /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-        let nameOK = true;
-        let emailOK = true;
-        let messageOK = true;
 
         if (event.target.id === "name") {
 
             if(event.target.value.trim() === "") {
 
                 setErrorConfirmationMessageText("Name is required.");
-                nameOK = false;
+                setName("");
 
             } else {
 
-                nameOK = true;
                 setName(event.target.value.trim());
+                setErrorConfirmationMessageText("");
             }
         
         } else if (event.target.id === "email") {
@@ -36,17 +33,17 @@ export default function Contact(){
             if(event.target.value.trim() === "") {
 
                 setErrorConfirmationMessageText("Email is required.");
-                emailOK = false;
+                setEmail("");
 
             } else if(!event.target.value.trim().match(emailRegex)) {
 
                 setErrorConfirmationMessageText("You have entered an invalid email address. Email addresses must be entered in the format someone@example.com");
-                emailOK = false;
+                setEmail("");
             
             } else {
 
-                emailOK = true;
                 setEmail(event.target.value.trim());
+                setErrorConfirmationMessageText("");
             }
 
         } else if (event.target.id === "message") {
@@ -54,19 +51,14 @@ export default function Contact(){
             if(event.target.value.trim() === "") {
 
                 setErrorConfirmationMessageText("Message is required.");
-                messageOK = false;
+                setContactMessageText("");
             
             } else {
 
-                messageOK = true;
                 setContactMessageText(event.target.value.trim())
+                setErrorConfirmationMessageText("");
             }
         } 
-
-        if(nameOK && emailOK && messageOK){
-
-            setErrorConfirmationMessageText("");
-        }
     }
 
     /* This function deals with the user clicking the Submit button.  If the form doesn't contain a name, valid email address, and message,
@@ -79,7 +71,8 @@ export default function Contact(){
 
         if(name && email && contactMessageText){
 
-            setErrorConfirmationMessageText("Submit button clicked");
+            setErrorConfirmationMessageText("Submit button clicked!");
+            return;
         
         } else {
 
@@ -113,13 +106,13 @@ export default function Contact(){
                 
                 } else {
 
-                    errorText += "Message"
+                    errorText += "Message "
                 }
 
                 missingFieldCount++;
             }
 
-            if(missingFieldCount > 0){
+            if(missingFieldCount > 1){
 
                 errorText += "are required.";
             
