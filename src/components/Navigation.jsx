@@ -1,33 +1,52 @@
 import '../styles/component-styles/Navigation.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
+// This function displays the navigation links in the header on each page.
 export default function Navigation({buttonClicked}){
 
-    const [selectedItem, setSelectedItem] = useState("about-me")
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    let sections = [
+
+        { name: 'about-me', path: '/' },
+        { name: 'portfolio', path: '/portfolio' },
+        { name: 'contact', path: '/contact' },
+        { name: 'resume', path: '/resume' },
+    ]
+
+    let activeSection = sections.find((section) => section.path === currentPath);
+
+    if(!activeSection){
+
+        activeSection = 'about-me'
+    }
+    
+    const [selectedItem, setSelectedItem] = useState(activeSection.name);
 
     function handleNavClick(event){
 
-        if (event.target.id === "about-me-list-item"){
+        if (event.target.id === 'about-me-list-item'){
 
-            setSelectedItem("about-me");
-            buttonClicked("about-me");
+            setSelectedItem('about-me');
+            buttonClicked('about-me');
             
 
-        } else if (event.target.id === "portfolio-list-item"){
+        } else if (event.target.id === 'portfolio-list-item'){
 
-            setSelectedItem("portfolio");
-            buttonClicked("portfolio");
+            setSelectedItem('portfolio');
+            buttonClicked('portfolio');
 
-        } else if (event.target.id === "contact-list-item"){
+        } else if (event.target.id === 'contact-list-item'){
 
-            setSelectedItem("contact");
-            buttonClicked("contact");
+            setSelectedItem('contact');
+            buttonClicked('contact');
 
-        } else if (event.target.id === "resume-list-item"){
+        } else if (event.target.id === 'resume-list-item'){
 
-            setSelectedItem("resume");
-            buttonClicked("resume");
+            setSelectedItem('resume');
+            buttonClicked('resume');
         } 
     }
 

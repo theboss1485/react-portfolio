@@ -1,12 +1,9 @@
 
-import { useEffect } from 'react';
+// This overarching file contains JavaScript to display the various components of the application.
 import { useState } from 'react'
+import { useLocation, Outlet } from 'react-router-dom';
 
 import Header from './components/Header.jsx'
-import AboutMe from './pages/AboutMe.jsx';
-import Portfolio from './pages/Portfolio.jsx';
-import Contact from './pages/Contact.jsx';
-import Resume from './pages/Resume.jsx';
 import Footer from './components/Footer.jsx';
 import './styles/App.css'
 
@@ -14,51 +11,35 @@ import './styles/App.css'
 
 function App() {
 
-    const [activeSection, setActiveSection] = useState("about-me");
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    let pages = [
+
+        { name: 'about-me', path: '/' },
+        { name: 'portfolio', path: '/portfolio' },
+        { name: 'contact', path: '/contact' },
+        { name: 'resume', path: '/resume' },
+    ]
+
+    const activePage = pages.find((page) => page.path === currentPath);
+
+    const [activeSection, setActiveSection] = useState(activePage.name);
 
     function changeActiveSection(section){
 
         setActiveSection(section)
         
     }
-
-    useEffect(() => {
-
-    }, [activeSection])
     
     return (
+        
         <section>
             <Header navButtonClicked={changeActiveSection} />
-            {activeSection === "about-me" && <AboutMe />}
-            {activeSection === "portfolio" && <Portfolio />}
-            {activeSection === "contact" && <Contact />}
-            {activeSection === "resume" && <Resume />}
+            <Outlet />
             <Footer />
         </section>
     )
 }
 
 export default App
-
-    // <>
-    //   <section>
-    //     <a href="https://vitejs.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </section>
-    //   <h1>Vite + React</h1>
-    //   <section className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </section>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>

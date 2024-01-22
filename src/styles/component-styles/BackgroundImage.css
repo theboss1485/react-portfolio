@@ -1,3 +1,5 @@
+/* This file contains CSS for the BackgroundImage component of the application, which is the
+image that is displayed for each project on the Portfolio page. */
 .background-image {
 
     width: 31.25em;
@@ -30,7 +32,6 @@
         height: 30em;
         margin: 1em;
         font-size: 3vw;
-        
     }
 }
 

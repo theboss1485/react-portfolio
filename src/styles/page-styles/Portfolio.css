@@ -1,3 +1,4 @@
+/* This file contains styling for the Portfolio page of the application. */
 .portfolio{
 
     display: grid;
@@ -11,13 +12,12 @@
     
     .portfolio{
 
-        margin-top: 1em;
-        
         display: grid;
-        transition: opacity 0.8s;
+        margin-top: 1em;
         grid-template-columns: 550px 550px;
         grid-gap: 2em;
         grid-template-rows: 525px;
+        transition: opacity 0.8s;
     }
 }
 

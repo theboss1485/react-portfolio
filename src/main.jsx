@@ -10,6 +10,8 @@ import Contact from './pages/Contact.jsx';
 import Resume from './pages/Resume.jsx';
 import './styles/index.css'
 
+/* This portion of the code creates a React router so as to give the application 
+multiple URLs, even though it is a single-page application. */
 const router = createBrowserRouter([
 
     {
