@@ -35,7 +35,7 @@ The user can also click on the three icons in the footer to visit my profiles on
 
 ## Credits
 
-I used the Xpert Learning Assistant AI chatbot to help out with writing the code.
+I used the Xpert Learning Assistant AI chatbot to help out with writing the code.  I took the code for the Error.jsx page from activity 24 of Module 20.
 
 ## License
 
