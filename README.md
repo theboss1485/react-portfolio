@@ -3,7 +3,7 @@
 ## Description
 
 My motivation for building this project was to gain experience with building a single-page application using React.  I wanted to learn React because it is a skill that is currently in demand.  I built this project so that I could showcase my best projects for the software development bootcamp, but also practice using React at the same time.  This project solves the problem of a student needing a place to showcase the projects he or she has created.  It also allows the student to make his or her resume available for download online.
-For this project, I learned, how to use React to break a webpage into its various components using React, and then link them back together.  I also learned how to make a file available for download using HTML.
+For this project, I learned, how to use React to break a webpage into its various components, and then link them back together.  I also learned how to make a file available for download using HTML.
 
 ## Table of Contents (Optional)
 
@@ -47,7 +47,7 @@ I don't have any noteworthy badges to display.
 
 ## Features
 
-This project is a portfolio application that displays images from six of my noteworthy projects.  Hovering over each image displays a list of noteworthy technologies in the application, a link to the deployed application, and a link to the application's GitHub repository.  The project also contains a Contact form that displays error messages if the user clicks out of the input fields without entering text.  However, the contact form doesn't actually contact me yet.  Finally the project contains a link to download my resume as well as a list of technologies that I am proficient in.
+This project is a portfolio application that displays images from six of my noteworthy projects.  Hovering over each image displays a list of noteworthy technologies in the application, a link to the deployed application, and a link to the application's GitHub repository.  The project also contains a Contact form that displays error messages if the user clicks out of the input fields without entering text.  However, the contact form doesn't actually contact me yet.  Finally the project contains a link to download my resume as well as a list of technologies that I am proficient in.  The footer contains icons which link to my Github, LinkedIn, and Twitter accounts.
 
 ## How to Contribute
 
